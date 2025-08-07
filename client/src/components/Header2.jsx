@@ -55,7 +55,7 @@ const Header = () => {
             <div className="md:hidden flex items-center justify-between px-4 py-3">
                 {/* Logo */}
                 <NavLink to="/" onClick={closeMenu}>
-                    <img src={TechnoBatsHeaderLogo} alt="Logo" className="h-12 w-auto" />
+                    <img src={TechnoBatsHeaderLogo} alt="Logo" className="h-12 w-50" />
                 </NavLink>
 
                 {/* Button */}
@@ -74,7 +74,7 @@ const Header = () => {
                     onClick={toggleMenu}
                 >
                     <svg
-                        className="w-9 h-9 mt-3"
+                        className="w-9 h-9 mt-3 ml-5"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
