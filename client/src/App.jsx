@@ -1,16 +1,28 @@
-import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage';
+import React from "react";
+import { createHashRouter, RouterProvider } from "react-router-dom";
+import Layout from "./components/Layout";
+import HomePage from "./pages/HomePage";
+import ContactPage from "./pages/ContactPage";
 
-function App() {
+const router = createHashRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <HomePage />,
+      },
+      {
+        path: "contact-us",
+        element: <ContactPage />,
+      },
+    ],
+  },
+]);
 
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-      </Routes>
-    </Router>
-  )
-}
+const App = () => {
+  return <RouterProvider router={router} />;
+};
 
-export default App
+export default App;

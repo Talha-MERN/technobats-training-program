@@ -3,7 +3,7 @@ import React from "react";
 function HomePage() {
   return (
     <div>
-    <h1>This is a Home Page.</h1>
+    <h1>This is a Contact Page.</h1>
     </div>
   );
 }
