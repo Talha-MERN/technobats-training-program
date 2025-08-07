@@ -91,18 +91,18 @@ const Header = () => {
 
             {/* Mobile Dropdown Menu */}
             {isMenuOpen && (
-                <div className="md:hidden bg-yellow-100 text-black px-6 py-4 space-y-4">
-                    <NavLink to="/" onClick={closeMenu} className="block">Home</NavLink>
-                    <NavLink to="/about-us" onClick={closeMenu} className="block">About Us</NavLink>
-                    <NavLink to="/services" onClick={closeMenu} className="block">Services</NavLink>
-                    <NavLink to="/packages" onClick={closeMenu} className="block">Packages</NavLink>
-                    <NavLink to="/contact-us" onClick={closeMenu} className="block">Contact Us</NavLink>
+                <div className="md:hidden bg-yellow-300 text-black px-6 py-4 space-y-4 text-center">
+                    <NavLink to="/" onClick={closeMenu} className="block border-b">Home</NavLink>
+                    <NavLink to="/about-us" onClick={closeMenu} className="block border-b">About Us</NavLink>
+                    <NavLink to="/services" onClick={closeMenu} className="block border-b">Services</NavLink>
+                    <NavLink to="/packages" onClick={closeMenu} className="block border-b">Packages</NavLink>
+                    <NavLink to="/contact-us" onClick={closeMenu} className="block border-b">Contact Us</NavLink>
                     <a
                         href="https://wa.me/+923164641190"
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={closeMenu}
-                        className="block bg-green-500 text-white px-4 py-2 rounded-md text-center"
+                        className="block bg-white text-black px-4 py-2 rounded-md text-center"
                     >
                         Free Consultation
                     </a>
