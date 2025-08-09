@@ -9,7 +9,7 @@ const Header = () => {
     const closeMenu = () => setIsMenuOpen(false);
 
     return (
-        <header className="bg-yellow-300 shadow-md w-full z-50 relative px-6 sm:px-12">
+        <header className="bg-yellow-400 shadow-md w-full z-50 relative px-6 sm:px-12">
             {/* Desktop Header */}
             <div className="hidden md:flex container mx-auto justify-between items-center py-4 px-6">
                 <NavLink to="/" onClick={closeMenu}>
@@ -45,7 +45,7 @@ const Header = () => {
                     href="https://wa.me/+923164641190"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white hover:bg-yellow-400 text-black font-semibold py-2 px-4 rounded shadow"
+                    className="bg-white hover:bg-yellow-500 text-black font-semibold py-2 px-4 rounded shadow"
                 >
                     Free Consultation
                 </a>
