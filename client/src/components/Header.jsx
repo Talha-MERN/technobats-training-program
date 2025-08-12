@@ -1,153 +1,115 @@
 import React, { useState } from "react";
-//import { FaWhatsapp } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
-import TechnoBatsLogo from "../images/technobats-logo.png";
 import TechnoBatsHeaderLogo from "../images/technobats-header-logo.png";
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+    const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+    const closeMenu = () => setIsMenuOpen(false);
 
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
+    return (
+        <header className="bg-yellow-400 shadow-md w-full z-50 relative px-6 sm:px-12">
+            {/* Desktop Header */}
+            <div className="hidden md:flex container mx-auto justify-between items-center py-4 px-6">
+                <NavLink to="/" onClick={closeMenu}>
+                    {/* <img src={TechnoBatsHeaderLogo} className="w-150 h-150"  alt="Logo" /> */}
+                    {/* width={150} height={150} */}
+                    <img src={TechnoBatsHeaderLogo} alt="Logo" className="w-16 sm:w-20 md:w-24 lg:w-64" />
+                </NavLink>
 
-  return (
-    // bg-gradient-to-r from-customBlue to-customPink
-    <header className="bg-yellow-300 shadow-md sm:px-13">
-      <div className="container mx-auto flex items-center justify-between py-4 px-6">
-        {/* Left Side: Logo */}
-        <NavLink to="/" className="text-left" onClick={closeMenu}>
-          <img src={TechnoBatsHeaderLogo} width={150} height={150} />
-        </NavLink>
+                <nav className="flex items-center space-x-6">
+                    <NavLink to="/" className={({ isActive }) =>
+                        `text-black hover:text-white transition-all ${isActive ? "font-bold" : ""}`}>
+                        Home
+                    </NavLink>
+                    <NavLink to="/about-us" className={({ isActive }) =>
+                        `text-black hover:text-white transition-all ${isActive ? "font-bold" : ""}`}>
+                        About Us
+                    </NavLink>
+                    <NavLink to="/services" className={({ isActive }) =>
+                        `text-black hover:text-white transition-all ${isActive ? "font-bold" : ""}`}>
+                        Courses
+                    </NavLink>
+                    <NavLink to="/packages" className={({ isActive }) =>
+                        `text-black hover:text-white transition-all ${isActive ? "font-bold" : ""}`}>
+                        Packages
+                    </NavLink>
+                    <NavLink to="/contact-us" className={({ isActive }) =>
+                        `text-black hover:text-white transition-all ${isActive ? "font-bold" : ""}`}>
+                        Contact Us
+                    </NavLink>
+                </nav>
 
-        {/* Center: Navigation */}
+                <a
+                    href="https://wa.me/+923164641190"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white hover:bg-yellow-500 text-black font-semibold py-2 px-4 rounded shadow"
+                >
+                    Free Consultation
+                </a>
+            </div>
 
-        <nav className="hidden md:flex items-center space-x-6">
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              `text-black hover:text-white transition-all duration-200 ${isActive ? "text-white" : ""
-              }`
-            }
-          >
-            Home
-          </NavLink>
-          <NavLink
-            to="/about-us"
-            className={({ isActive }) =>
-              `text-black hover:text-white transition-all duration-200 ${isActive ? "text-white" : ""
-              }`
-            }
-          >
-            About Us
-          </NavLink>
-          <NavLink
-            to="/services"
-            className={({ isActive }) =>
-              `text-black hover:text-white transition-all duration-200 ${isActive ? "text-white" : ""
-              }`
-            }
-          >
-            Services
-          </NavLink>
-          <NavLink
-            to="/packages"
-            className={({ isActive }) =>
-              `text-black hover:text-white transition-all duration-200 ${isActive ? "text-white" : ""
-              }`
-            }
-          >
-            Packages
-          </NavLink>
-          <NavLink
-            to="/contact-us"
-            className={({ isActive }) =>
-              `text-black hover:text-white transition-all duration-200 ${isActive ? "text-white" : ""
-              }`
-            }
-          >
-            Contact Us
-          </NavLink>
-        </nav>
+            {/* Mobile Header */}
+            <div className="md:hidden flex items-center justify-between px-4 py-3">
+                {/* Logo */}
+                <NavLink to="/" onClick={closeMenu}>
+                    <img src={TechnoBatsHeaderLogo} alt="Logo" className="h-12 w-50" />
+                </NavLink>
 
-        {/* Right Side: Free Consultation Button */}
-        <a
+                {/* Button */}
+                {/* <a
           href="https://wa.me/+923164641190"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-white hover:bg-blue-700 text-black py-2 px-4 rounded"
+          className="bg-gradient-to-b from-yellow-300 to-orange-300 px-6 py-3 rounded-md text-black text-center font-semibold text-lg leading-tight"
         >
-          {/* <FaWhatsapp className="text-2xl" /> */}
-          <span className="text-lg">Free Consultation</span>
-        </a>
+          Schedule A<br />Meeting
+        </a> */}
 
-        {/* Mobile Menu: Hamburger Icon */}
-        <button
-          className="md:hidden text-white focus:outline-none"
-          onClick={toggleMenu}
-        >
-          <i className="fas fa-bars text-2xl"></i>
-        </button>
-      </div>
+                {/* Hamburger Icon */}
+                <button
+                    className="text-black focus:outline-none"
+                    onClick={toggleMenu}
+                >
+                    <svg
+                        className="w-9 h-9 mt-3 ml-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M4 6h16M4 12h16M4 18h16"
+                        />
+                    </svg>
+                </button>
+            </div>
 
-      {/* Mobile Dropdown Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-customBlue text-white">
-          <nav className="flex flex-col items-center space-y-4 py-4">
-            <NavLink
-              to="/"
-              className="hover:text-opacity-80"
-              onClick={closeMenu}
-            >
-              Home
-            </NavLink>
-            <NavLink
-              to="/about-us"
-              className="hover:text-opacity-80"
-              onClick={closeMenu}
-            >
-              About Us
-            </NavLink>
-            <NavLink
-              to="/services"
-              className="hover:text-opacity-80"
-              onClick={closeMenu}
-            >
-              Services
-            </NavLink>
-            <NavLink
-              to="/packages"
-              className="hover:text-opacity-80"
-              onClick={closeMenu}
-            >
-              Packages
-            </NavLink>
-            <NavLink
-              to="/contact-us"
-              className="hover:text-opacity-80"
-              onClick={closeMenu}
-            >
-              Contact Us
-            </NavLink>
-            <a
-              href="https://wa.me/+923267374898"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-green-500 text-black px-4 py-2 rounded-lg flex items-center space-x-2 hover:bg-opacity-90 transition"
-              onClick={closeMenu}
-            >
-              <FaWhatsapp className="text-lg" />
-              <span>Free Consultation</span>
-            </a>
-          </nav>
-        </div>
-      )}
-    </header>
-  );
+            {/* Mobile Dropdown Menu */}
+            {isMenuOpen && (
+                <div className="md:hidden bg-yellow-300 text-black px-6 py-4 space-y-4 text-center">
+                    <NavLink to="/" onClick={closeMenu} className="block border-b">Home</NavLink>
+                    <NavLink to="/about-us" onClick={closeMenu} className="block border-b">About Us</NavLink>
+                    <NavLink to="/services" onClick={closeMenu} className="block border-b">Services</NavLink>
+                    <NavLink to="/packages" onClick={closeMenu} className="block border-b">Packages</NavLink>
+                    <NavLink to="/contact-us" onClick={closeMenu} className="block border-b">Contact Us</NavLink>
+                    <a
+                        href="https://wa.me/+923164641190"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={closeMenu}
+                        className="block bg-white text-black px-4 py-2 rounded-md text-center"
+                    >
+                        Free Consultation
+                    </a>
+                </div>
+            )}
+        </header>
+    );
 };
 
 export default Header;
