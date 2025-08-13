@@ -3,7 +3,7 @@ import TechnoBatsHeaderLogo from "../images/technobats-header-logo.png";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#f4f0f5] text-black py-16 px-6 md:px-12">
+    <footer className="bg-yellow-400 text-black py-16 px-6 md:px-12">
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
         
         {/* Logo & Description */}

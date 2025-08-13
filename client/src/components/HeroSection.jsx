@@ -1,5 +1,6 @@
 import React from "react";
 import HeroImage from "../images/skills.png";
+import Typewriter from "typewriter-effect";
 
 const HeroSection = () => {
     return (
@@ -15,6 +16,7 @@ const HeroSection = () => {
                     <h1 className="text-4xl md:text-5xl font-bold leading-tight">
                         From <span className="text-yellow-400">Learning</span> to <span className="text-yellow-400">Earning</span> — Start Your <span className="text-yellow-400">Journey</span> Today
                     </h1>
+
                     <p className="mt-4 text-gray-600 text-lg">
                         We provide industry-focused training in IT, business, and creative skills — helping you build a career with confidence.
                     </p>
