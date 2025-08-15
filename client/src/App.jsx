@@ -3,6 +3,7 @@ import { createHashRouter, RouterProvider } from "react-router-dom";
 import Layout from "./components/Layout";
 import HomePage from "./pages/HomePage";
 import ContactPage from "./pages/ContactPage";
+import CourseDetailPage from "./pages/CourseDetail";
 
 const router = createHashRouter([
   {
@@ -16,6 +17,10 @@ const router = createHashRouter([
       {
         path: "contact-us",
         element: <ContactPage />,
+      },
+      {
+        path: "/course/:courseId",
+        element: <CourseDetailPage />,
       },
     ],
   },

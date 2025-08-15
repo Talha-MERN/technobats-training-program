@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import MernStackLogo from "../images/MERN-logo2.webp";
 import GraphicsDesigningLogo from "../images/graphics-designing-logo.png";
 
@@ -13,21 +14,21 @@ const courses = [
         ]
     },
     {
-        title: "Graphic Designing",
+        title: "Frontend Development with React",
         icon: GraphicsDesigningLogo,
         points: [
-            "Master design principles and color theory",
-            "Create stunning visuals with Adobe Photoshop & Illustrator",
-            "Build a portfolio with real-world projects"
+            "Master modern React (Hooks, Context, Router)",
+            "Build responsive, interactive UIs",
+            "Work with APIs and state management"
         ]
     },
     {
-        title: "MERN Stack Development",
+        title: "Backend Development with Node.js",
         icon: MernStackLogo,
         points: [
-            "Learn MERN Stack from basics to advanced",
-            "Hands-on labs and real-world projects",
-            "Get certified in MERN Stack"
+            "Learn Node.js fundamentals and Express",
+            "Work with databases (MongoDB, SQL)",
+            "Build scalable backend applications"
         ]
     },
     {
@@ -38,27 +39,30 @@ const courses = [
             "Create stunning visuals with Adobe Photoshop & Illustrator",
             "Build a portfolio with real-world projects"
         ]
-    },{
-        title: "MERN Stack Development",
+    },
+    {
+        title: "Social Media Marketing",
         icon: MernStackLogo,
         points: [
-            "Learn MERN Stack from basics to advanced",
-            "Hands-on labs and real-world projects",
-            "Get certified in MERN Stack"
+            "Learn marketing strategies for all major platforms",
+            "Create engaging content and ad campaigns",
+            "Measure and optimize campaign performance"
         ]
     },
     {
-        title: "Graphic Designing",
+        title: "Video Editing",
         icon: GraphicsDesigningLogo,
         points: [
-            "Master design principles and color theory",
-            "Create stunning visuals with Adobe Photoshop & Illustrator",
-            "Build a portfolio with real-world projects"
+            "Master tools like Adobe Premiere Pro & After Effects",
+            "Edit videos for YouTube, ads, and social media",
+            "Add effects, transitions, and sound design"
         ]
     },
 ];
 
 export default function CoursesOverview() {
+    const navigate = useNavigate();
+
     return (
         <section className="bg-yellow-400 py-16 px-6 md:px-12 border-b">
             <div className="max-w-7xl mx-auto px-4">
@@ -84,6 +88,7 @@ export default function CoursesOverview() {
                                         className="w-12 h-12 object-contain"
                                     />
                                 </div>
+
                                 {/* Points */}
                                 <ul className="space-y-3 text-gray-700">
                                     {course.points.map((point, i) => (
@@ -95,7 +100,10 @@ export default function CoursesOverview() {
                             </div>
 
                             {/* Button */}
-                            <button className="mt-6 bg-yellow-400 text-white py-2 px-4 rounded hover:bg-yellow-600 transition duration-300 cursor-pointer">
+                            <button
+                                className="mt-6 bg-yellow-400 text-white py-2 px-4 rounded hover:bg-yellow-600 transition duration-300 cursor-pointer"
+                                onClick={() => navigate(`/course/${idx}`)}
+                            >
                                 Learn More
                             </button>
                         </div>

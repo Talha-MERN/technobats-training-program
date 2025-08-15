@@ -41,7 +41,7 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold text-black mb-4">Contact</h3>
           <p>Email: <a href="mailto:info@technobats.com" className="hover:text-white">info@technobats.com</a></p>
-          <p>Phone: +91 98765 43210</p>
+          <p>Phone: +92 316 4641190</p>
           <div className="flex space-x-4 mt-4">
             <a href="#" className="hover:text-white"><FaFacebookF /></a>
             <a href="#" className="hover:text-white"><FaTwitter /></a>
