@@ -4,7 +4,7 @@ import Typewriter from "typewriter-effect";
 
 const HeroSection = () => {
   return (
-    <section className="bg-[#f4f0f5] py-16 px-6 md:px-12">
+    <section className="bg-gray-50 py-16 px-6 md:px-12">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
         {/* Left Text Side */}
         <div>
