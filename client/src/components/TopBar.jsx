@@ -20,11 +20,11 @@ const TopBar = () => {
 
         {/* Social Media Icons */}
         <div className="flex justify-center items-center gap-4 text-xl sm:text-lg">
-          <a href="#" className="hover:bg-white hover:text-black rounded-full py-2 px-2" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
-          <a href="#" className="hover:bg-white hover:text-black rounded-full py-2 px-2" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-          <a href="#" className="hover:bg-white hover:text-black rounded-full py-2 px-2" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
-          <a href="#" className="hover:bg-white hover:text-black rounded-full py-2 px-2" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
-          <a href="#" className="hover:bg-white hover:text-black rounded-full py-2 px-2" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
+          <a href="#" className="hover:bg-white hover:text-yellow-400 rounded-full py-2 px-2" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
+          <a href="#" className="hover:bg-white hover:text-yellow-400 rounded-full py-2 px-2" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+          <a href="#" className="hover:bg-white hover:text-yellow-400 rounded-full py-2 px-2" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
+          <a href="#" className="hover:bg-white hover:text-yellow-400 rounded-full py-2 px-2" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
+          <a href="#" className="hover:bg-white hover:text-yellow-400 rounded-full py-2 px-2" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
         </div>
       </div>
     </div>

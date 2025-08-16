@@ -1,10 +1,10 @@
 import React from "react";
-import ContactSection from "../components/ContactSection";
+import ContactSection2 from "../components/ContactSection2";
 
 function HomePage() {
   return (
     <div>
-    <ContactSection />
+    <ContactSection2 />
     </div>
   );
 }

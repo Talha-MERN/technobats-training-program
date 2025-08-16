@@ -42,7 +42,7 @@ const FeatureCards = () => {
   return (
     <section className="bg-[#f4f0f5] py-16 px-6 md:px-12">
       {/* Heading */}
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 underline">
         Why Choose Us
       </h2>
 

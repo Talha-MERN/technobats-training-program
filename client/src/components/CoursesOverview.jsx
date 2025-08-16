@@ -76,8 +76,7 @@ export default function CoursesOverview() {
                     {courses.map((course, idx) => (
                         <div
                             key={idx}
-                            className="bg-[#f4f0f5] border rounded-lg shadow-sm p-6 flex flex-col justify-between"
-                        >
+                            className="bg-[#f4f0f5] border rounded-lg shadow-sm p-6 flex flex-col justify-between hover:shadow-[0_10px_30px_#000000]">
                             {/* Header */}
                             <div>
                                 <div className="flex justify-between items-start mb-4">
